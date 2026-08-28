@@ -76,7 +76,7 @@ public class ScheduleAppointment extends BaseClass {
 			hourSelect.selectByVisibleText("05");
 			Select minSelect = new Select(driver.findElement(By.xpath("//select[@name='minute']")));
 			minSelect.selectByVisibleText("30");
-			String uniqueReason = RandomUtil.randomString("To Meet Doctor");
+			String uniqueReason = AppLibrary.randomString("To Meet Doctor");
 			driver.findElement(By.name("reason")).sendKeys(uniqueReason);
 			String expReason = driver.findElement(By.name("reason")).getAttribute("value");
 			String expTime= hourSelect.getFirstSelectedOption().getText()+":"+minSelect.getFirstSelectedOption().getText();
