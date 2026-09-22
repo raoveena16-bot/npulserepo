@@ -21,6 +21,9 @@ public class RegistrationPage {
 	private By userPasswordLocator = By.id("password");
 	private By userEmailLocator = By.id("email");
 	private By userPhoneLocator = By.id("phone");
+	private By userGenderLocator = By.id("gender");
+	private By userDobLocator = By.id("dob");
+	private By registerButtonLocator = By.xpath("//button[text()='Register']");
 	
 	public RegistrationPage(WebDriver driver)
 	{
@@ -37,11 +40,11 @@ public class RegistrationPage {
 		driver.findElement(userPasswordLocator).sendKeys(uname);
 		driver.findElement(userEmailLocator).sendKeys(uname+"@gmail.com");
 		driver.findElement(userPhoneLocator).sendKeys("1234567891");
-		Select gender = new Select(driver.findElement(By.id("gender")));
+		Select gender = new Select(driver.findElement(userGenderLocator));
 		gender.selectByVisibleText("Male");
-		WebElement dob = driver.findElement(By.id("dob"));
+		WebElement dob = driver.findElement(userDobLocator);
 		dob.sendKeys("1990-01-01");
-		driver.findElement(By.xpath("//button[text()='Register']")).submit();
+		driver.findElement(registerButtonLocator).submit();
 		Alert alrt = driver.switchTo().alert();
 		return alrt.getText(); 
 	}
