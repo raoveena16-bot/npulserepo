@@ -6,7 +6,7 @@
   
   <test thread-count="5" name="Test">
     <classes>
-      <class name="org.iitwf.hc.nexuspulse.EditProfileTests"/>
+      <class name="org.iitwf.hc.nexuspulse.RegisterTests"/>
     </classes>
   </test> <!-- Test -->
 
