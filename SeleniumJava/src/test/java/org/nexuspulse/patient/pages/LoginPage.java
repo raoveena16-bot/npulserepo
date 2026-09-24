@@ -12,10 +12,10 @@ public class LoginPage {
 	{
 		this.driver = driver;
 	}
-	public void login(String uName,String pWord)
+	public void login(String puname,String ppword)
 	{
-		driver.findElement(userNameLocator).sendKeys(uName);
-		driver.findElement(passwordLocator).sendKeys(pWord);
+		driver.findElement(userNameLocator).sendKeys(puname);
+		driver.findElement(passwordLocator).sendKeys(ppword);
 		driver.findElement(submitButtonLocator).click();
 	}
 	public RegistrationPage register()
