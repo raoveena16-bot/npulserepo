@@ -30,7 +30,6 @@ public class TestMessages extends BaseClass {
 		messagePage.sendMessage(randomMessage);
 		
 		String displayedMessage = messagePage.checkMessage(randomMessage);
-		
 		Assert.assertEquals(displayedMessage, randomMessage);
 	}
 	
