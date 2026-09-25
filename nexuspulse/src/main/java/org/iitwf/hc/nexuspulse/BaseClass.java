@@ -3,9 +3,20 @@ package org.iitwf.hc.nexuspulse;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import java.awt.Rectangle;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
+
 
 public class BaseClass {
 
@@ -13,6 +24,8 @@ public class BaseClass {
 	protected Properties prop;
 	String environment,browserType;
 	
+	
+
 	@BeforeTest
 	public void loadProperties() throws IOException
 	{
@@ -45,4 +58,20 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		
 	}
+	
+	public void captureAlertScreenshot(String fileName) {
+	    try {
+	        Robot robot = new Robot();
+	        Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
+	        BufferedImage screenFullImage = robot.createScreenCapture(screenRect);
+	        ImageIO.write(screenFullImage, "png", new File(fileName));
+	        System.out.println("Alert screenshot saved: " + fileName);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+
+	
+
+
 }
