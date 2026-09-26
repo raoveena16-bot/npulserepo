@@ -1,0 +1,13 @@
+<suite name="Suite">
+<listeners>
+    <listener class-name="org.iitwf.nexuspulse.TestListener"/>
+</listeners>
+
+  
+  <test thread-count="1" name="Test">
+    <classes>
+      <class name="org.iitwf.nexuspulse.PatientMessageTest"/>
+    </classes>
+  </test> <!-- Test -->
+
+</suite> <!-- Suite -->

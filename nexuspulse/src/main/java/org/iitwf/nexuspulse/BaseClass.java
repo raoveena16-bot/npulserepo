@@ -1,4 +1,4 @@
-package org.iitwf.hc.nexuspulse;
+package org.iitwf.nexuspulse;
 
 import java.io.IOException;
 import java.util.Properties;
