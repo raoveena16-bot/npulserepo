@@ -1,0 +1,13 @@
+<suite name="Suite">
+<listeners>
+    <listener class-name="nexusPulse.TestListener"/>
+</listeners>
+
+  
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="nexusPulse.TestMessages"/>
+    </classes>
+  </test> <!-- Test -->
+
+</suite> <!-- Suite -->

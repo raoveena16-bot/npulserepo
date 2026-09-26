@@ -11,6 +11,7 @@ public class HomePage {
 	}
 	public void navigateToAModule(String module)
 	{
+		
 		driver.findElement(By.xpath("//span[text()='"+module+"']")).click();
 		
 	}

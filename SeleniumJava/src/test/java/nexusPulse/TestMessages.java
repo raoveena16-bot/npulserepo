@@ -14,6 +14,7 @@ public class TestMessages extends BaseClass {
 	MessagePage messagePage;
 	
 	@BeforeClass
+	
 	public void setup()
 	{
 		launchBrowser(prop.getProperty("url"));

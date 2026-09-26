@@ -19,6 +19,7 @@ WebDriver driver;
 		driver.findElement(By.xpath("//textarea[@placeholder='Type your message here...']")).sendKeys(message);
 		driver.findElement(By.xpath("//button[text()='Send']")).click();
 		return message;
+	
 	}
 	
 	public  String checkMessage(String expectedMessage)
